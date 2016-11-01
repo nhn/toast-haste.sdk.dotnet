@@ -8,7 +8,7 @@ Submit only relevant commits. We don't mind many commits in a pull request, but 
 
 - __Use a feature branch__ The pull request should be created from a feature branch, and not from _develop_. See below for why.
 - __No merge-commits__
-If you have commits that looks like this _"Merge branch 'my-branch' into develop"_ or _"Merge branch 'develop' of https://github.com/nhnent/haste.sdk.net into develop"_ you're probaly using merge instead of [rebase](https://help.github.com/articles/about-git-rebase) locally. See below on _Handling updates from upstream_.
+If you have commits that looks like this _"Merge branch 'my-branch' into develop"_ or _"Merge branch 'develop' of https://github.com/nhnent/toast-haste.sdk.dotnet into develop"_ you're probaly using merge instead of [rebase](https://help.github.com/articles/about-git-rebase) locally. See below on _Handling updates from upstream_.
 - __Squash commits__ Often we create temporary commits like _"Started implementing feature x"_ and then _"Did a bit more on feature x"_. Squash these commits together using [interactive rebase](https://help.github.com/articles/about-git-rebase). Also see [Squashing commits with rebase](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html).
 - __Descriptive commit messages__ If a commit's message isn't descriptive, change it using [interactive rebase](https://help.github.com/articles/about-git-rebase). Refer to issues using `#issue`. Example of a bad message ~~"Small cleanup"~~. Example of good message: _"Removed Security.Claims header from FSM, which broke Mono build per #62"_. Don't be afraid to write long messages, if needed. Try to explain _why_ you've done the changes. The Erlang repo has some info on [writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages).
 - __No one-commit-to-rule-them-all__ Large commits that changes too many things at the same time are very hard to review. Split large commits into smaller. See this [StackOverflow question](http://stackoverflow.com/questions/6217156/break-a-previous-commit-into-multiple-commits) for information on how to do this.
@@ -30,16 +30,16 @@ Make sure you have a [GitHub](https://github.com/) account.
 
 - Fork, clone, add upstream to the Haste SDK for .NET repository. See [Fork a repo](https://help.github.com/articles/fork-a-repo) for more detailed instructions or follow the instructions below.
 
-- Fork by clicking _Fork_ on https://github.com/nhnent/haste.sdk.net
+- Fork by clicking _Fork_ on https://github.com/nhnent/toast-haste.sdk.dotnet
 - Clone your fork locally.
 ```
 git clone https://github.com/YOUR-USERNAME/haste.sdk.net
 ```
 - Add an upstream remote.
 ```
-git remote add upstream https://github.com/nhnent/haste.sdk.net
+git remote add upstream https://github.com/nhnent/toast-haste.sdk.dotnet
 ```
-You now have two remotes: _upstream_ points to https://github.com/nhnent/haste.sdk.net, and _origin_ points to your fork on GitHub.
+You now have two remotes: _upstream_ points to https://github.com/nhnent/toast-haste.sdk.dotnet, and _origin_ points to your fork on GitHub.
 
 - Make changes. See below.
 
@@ -50,7 +50,7 @@ New to Git? See https://help.github.com/articles/what-are-other-good-resources-f
 ### Making changes
 __Never__ work directly on _develop_ or _master_ and you should never send a pull request from master - always from a feature branch created by you.
 
-- Pick an [issue](https://github.com/nhnent/haste.sdk.net/issues). If no issue exists (search first) create one.
+- Pick an [issue](https://github.com/nhnent/toast-haste.sdk.dotnet/issues). If no issue exists (search first) create one.
 -  Get any changes from _upstream_.
 ```
 git checkout develop

@@ -34,7 +34,7 @@
     - MAJOR.MINOR.BUILD 형식에 정식배포 전 버전이나 빌드 메타데이터를 위한 라벨을 덧붙이는 방법도 있다.
 
 ## Documetation
-- 문서는 [GitHub의 Wiki](https://github.com/nhnent/haste.sdk.net/wiki) 를 참조한다.
+- 문서는 [GitHub의 Wiki](https://github.com/nhnent/toast-haste.sdk.dotnet/wiki) 를 참조한다.
 
 ## Roadmap
 - NHN Entertainment 에서는 Toast Cloud Real-time Multiplayer(이하 RTM) 를 TOAST Haste를 이용해서 서비스하고 있다.

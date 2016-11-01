@@ -34,7 +34,7 @@ This SDK is compatible in Unity3D.
     - Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 ## Documetation
-- Reference to the [Wiki section of GitHub](https://github.com/nhnent/haste.sdk.net/wiki).
+- Reference to the [Wiki section of GitHub](https://github.com/nhnent/toast-haste.sdk.dotnet/wiki).
 
 ## Roadmap
 - At NHN Entertainment, we service Toast Cloud Real-time Multiplayer(a.k.a. RTM) developed by TOAST Haste.
