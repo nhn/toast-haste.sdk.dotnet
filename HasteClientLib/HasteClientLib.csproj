@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{486AE091-8784-4D9B-AE6C-3F0D12E43A92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Haste</RootNamespace>
+    <AssemblyName>HasteClientLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ByteBuffer\ByteBufferAllocator.cs" />
+    <Compile Include="ByteBuffer\ByteBufferBase.cs" />
+    <Compile Include="ByteBuffer\ByteBufferUtil.cs" />
+    <Compile Include="Data\ByteRead.cs" />
+    <Compile Include="ByteBuffer\Endian.cs" />
+    <Compile Include="ByteBuffer\EndianBuffer\ReversedByteBuffer.cs" />
+    <Compile Include="ByteBuffer\EndianBuffer\NormalByteBuffer.cs" />
+    <Compile Include="ByteBuffer\IByteBuffer.cs" />
+    <Compile Include="Data\ByteWrite.cs" />
+    <Compile Include="Data\DataSerializer.Write.cs" />
+    <Compile Include="Data\DataSerializer.Read.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Network\RoundTripTime.cs" />
+    <Compile Include="Network\UDP\UdpPeer.Send.cs" />
+    <Compile Include="PortRange.cs" />
+    <Compile Include="Queues\AckSendQueue.cs" />
+    <Compile Include="Queues\ReceiveQueueBase.cs" />
+    <Compile Include="Queues\ReliableReceiveQueue.cs" />
+    <Compile Include="Queues\ReliableSendQueue.cs" />
+    <Compile Include="Queues\SendQueueBase.cs" />
+    <Compile Include="Queues\UnreliableReceiveQueue.cs" />
+    <Compile Include="Queues\UnreliableSendQueue.cs" />
+    <Compile Include="ConnectionConfig.cs" />
+    <Compile Include="Data\ByteBufferFactory.cs" />
+    <Compile Include="Network\UDP\UdpChannelList.cs" />
+    <Compile Include="Network\UDP\UdpPeer.Ack.cs" />
+    <Compile Include="Network\UDP\UdpPeer.Receive.cs" />
+    <Compile Include="QosType.cs" />
+    <Compile Include="IListener.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Network\UDP\ConnectingBroker.cs" />
+    <Compile Include="Network\UDP\INetworkBroker.cs" />
+    <Compile Include="HastePeer.cs" />
+    <Compile Include="Messages\MessageBase.cs" />
+    <Compile Include="Data\DataEnums.cs" />
+    <Compile Include="Data\DataObject.cs" />
+    <Compile Include="Data\DataSerializer.cs" />
+    <Compile Include="Data\DataWrapper.cs" />
+    <Compile Include="Messages\InitialRequest.cs" />
+    <Compile Include="Messages\EventMessage.cs" />
+    <Compile Include="Messages\RequestMessage.cs" />
+    <Compile Include="Messages\ResponseMessage.cs" />
+    <Compile Include="EnvironmentTimer.cs" />
+    <Compile Include="INetworkPeer.cs" />
+    <Compile Include="NetStates.cs" />
+    <Compile Include="NetStatistics.cs" />
+    <Compile Include="NetworkConnection.cs" />
+    <Compile Include="Network\Enums.cs" />
+    <Compile Include="Network\SocketState.cs" />
+    <Compile Include="Network\TCP\TcpPeer.cs" />
+    <Compile Include="Network\TCP\TcpSocket.cs" />
+    <Compile Include="Network\UDP\IncomingCommand.cs" />
+    <Compile Include="Network\UDP\NetworkExtension.cs" />
+    <Compile Include="Network\UDP\OutgoingCommand.cs" />
+    <Compile Include="Network\UDP\UdpChannel.cs" />
+    <Compile Include="Network\UDP\UdpPeer.cs" />
+    <Compile Include="Network\UDP\UdpSocket.cs" />
+    <Compile Include="Security\BigInteger.cs" />
+    <Compile Include="Security\Cipher.cs" />
+    <Compile Include="Security\DiffieHellman.cs" />
+    <Compile Include="Security\Hash.cs" />
+    <Compile Include="Security\Hash\MD5.cs" />
+    <Compile Include="Security\Hash\SHA256.cs" />
+    <Compile Include="Security\Hash\HashBase.cs" />
+    <Compile Include="Security\OakleyGroup1.cs" />
+    <Compile Include="StatusCode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="SendOptions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
