@@ -1,3 +1,5 @@
+![Logo](https://cloud.githubusercontent.com/assets/4951898/19913850/7bf34c04-a0e9-11e6-877d-8292a93b9a2a.png)
+
 # TOAST Haste SDK for .NET
 `TOAST Haste SDK for .NET` 는 UDP 기반의 게임 서버 프레임워크인 `TOAST Haste framework` 를 위한 닷넷용 클라이언트 SDK 입니다.
 
