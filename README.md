@@ -61,7 +61,7 @@ This SDK is compatible in Unity3D.
 - dl_haste@nhnent.com
 
 ## Contributor
-- Oh bum, Kwon (Founder)
+- Ethan, Kwon (Founder)
 - Tae gyeong, Kim
 
 ## License
