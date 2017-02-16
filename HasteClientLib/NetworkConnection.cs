@@ -213,6 +213,11 @@ namespace Haste
 
         void IListener.OnStatusChanged(StatusCode statusCode, string message)
         {
+            if (StatusChanged != null)
+            {
+                StatusChanged(statusCode, message);
+            }
+
             switch (statusCode)
             {
                 case StatusCode.ServerConnected:
@@ -225,11 +230,6 @@ namespace Haste
                 case StatusCode.FailedToSend:
                     Disconnect();
                     break;
-            }
-
-            if (StatusChanged != null)
-            {
-                StatusChanged(statusCode, message);
             }
         }
 
