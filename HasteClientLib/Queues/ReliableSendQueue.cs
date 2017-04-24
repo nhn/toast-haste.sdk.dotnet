@@ -48,7 +48,7 @@ namespace Haste.Network.Queues
             command.SentTime = currentSendingTime;
             command.SendAttempts++; // 송신 횟수
             // 재전송을 위한 평균 RTT + 평균 분산 값
-            command.RoundTripTimeout = newRtt * command.SendAttempts;
+            command.RoundTripTimeout = newRtt * command.SendAttempts * RoundTripTime.GetBackOffMultiple(command.SendAttempts);
 
             lock (_sentCommands)
             {
