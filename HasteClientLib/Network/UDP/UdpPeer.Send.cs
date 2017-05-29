@@ -214,7 +214,7 @@ namespace Haste.Network
 
                     if (command.IsTimeout(currentTime, SentCountAllowance))
                     {
-                        Log(LogLevel.Info, "Timeout-disconnect [{0}:{1}]", RemoteEndPoint.Address, RemoteEndPoint.Port);
+                        Log(LogLevel.Error, "Timeout-disconnect [{0}:{1}]", RemoteEndPoint.Address, RemoteEndPoint.Port);
                         Disconnect(DisconnectReason.Timeout, false);
                         return false;
                     }

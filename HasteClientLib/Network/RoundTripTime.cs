@@ -24,6 +24,8 @@ namespace Haste.Network
         internal const int InitialMeanOfRoundTripTime = 1000;
         internal const int InitialMeanOfRoundTripTimeVariance = 20;
 
+        private static readonly uint[] BackOffMultiple = { 1, 1, 2, 4, 8, 16 };
+
         protected int _meanOfRoundTripTime;
         protected int _meanOfRoundTripTimeVariance = 1;
 
@@ -91,6 +93,13 @@ namespace Haste.Network
             {
                 Interlocked.Exchange(ref _highestRoundTripTimeVariance, newRttVar);
             }
+        }
+
+        internal static uint GetBackOffMultiple(uint sentAttempts)
+        {
+            if (sentAttempts >= BackOffMultiple.Length)
+                return BackOffMultiple[BackOffMultiple.Length - 1];
+            return BackOffMultiple[sentAttempts];
         }
     }
 }
