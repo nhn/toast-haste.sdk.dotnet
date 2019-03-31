@@ -40,7 +40,7 @@
 - 문서는 [GitHub의 Wiki](https://github.com/nhnent/toast-haste.sdk.dotnet/wiki) 를 참조한다.
 
 ## Roadmap
-- NHN Entertainment 에서는 Toast Cloud Real-time Multiplayer(이하 RTM) 를 TOAST Haste를 이용해서 서비스하고 있다.
+- NHN 에서는 Toast Cloud Real-time Multiplayer(이하 RTM) 를 TOAST Haste를 이용해서 서비스하고 있다.
 - 그래서 아래 로드맵에 따라서 성능을 최적화하고 사용성을 향상시키는 노력을 꾸준히 할 예정이다. 
 
 ### Milestones
@@ -68,7 +68,7 @@
 ## License
 TOAST Haste SDK for .NET is licensed under the Apache 2.0 license, see [LICENSE](LICENSE.txt) for details.
 ```
-Copyright 2016 NHN Entertainment Corp.
+Copyright 2016 NHN Corp.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
